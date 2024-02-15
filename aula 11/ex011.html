@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paises</title>
+</head>
+<body>
+    <h1>Reconhecimento de Nacionalidade</h1>
+    Qual Pais vc vive: <input type="text" id="country">
+    <input type="button" value="Enviar" onclick="naci()">
+    <div id="res">
+
+    </div>
+    <script>
+        function naci() {
+            pais = window.document.querySelector('input#country').value
+            resultado = window.document.getElementById('res')
+            resultado.innerHTML = 'Você é '
+            if (pais == 'Brasil') {
+                resultado.innerHTML += 'Brasileiro'
+            } else {
+                resultado.innerHTML += 'Estrangeiro'
+            }
+        }
+    </script>
+</body>
+</html>
